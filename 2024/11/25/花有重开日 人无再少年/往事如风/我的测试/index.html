@@ -297,6 +297,10 @@
 <!-- meta -->
 <div class="article-meta">
 	
+		<span>
+			阅读量:<span id="/2024/11/25/%E8%8A%B1%E6%9C%89%E9%87%8D%E5%BC%80%E6%97%A5%20%E4%BA%BA%E6%97%A0%E5%86%8D%E5%B0%91%E5%B9%B4/%E5%BE%80%E4%BA%8B%E5%A6%82%E9%A3%8E/%E6%88%91%E7%9A%84%E6%B5%8B%E8%AF%95/" class="leancloud_visitors" data-flag-title="我的测试"></span>
+		</span>
+	
 
 	<span>ribuluo</span>
 	<span>2024-11-25 22:11:13</span>
@@ -348,9 +352,57 @@
 
 <!-- comment - valine -->
 
+	<div id="vcomments"></div>
+
 
 <script>
 	
+		// 评论
+		new Valine({
+			el: '#vcomments',
+			appId: 'L67iFRJzMgknqsfbMPqQXsw7-gzGzoHsz',
+			appKey: 'jDmzMrc5e09aWvX33m6fyFmY',
+			placeholder: 'Please enter a comment',
+			path: window.location.pathname,
+			avatar: 'retro',
+			highlight: false,
+      recordIP: true,
+      enableQQ: true,
+			requiredFields: ['nick','mail']
+		})
+	
+	
+    // 显示次数
+		function showTime(Counter) {
+			var query = new AV.Query("Counter");
+			if($(".leancloud_visitors").length > 0){
+				var url = $(".leancloud_visitors").attr('id').trim();
+				// where field
+				query.equalTo("words", url);
+				// count
+				query.count().then(function (number) {
+					// There are number instances of MyClass where words equals url.
+					$(document.getElementById(url)).text(number?  number : '--');
+				}, function (error) {
+					// error is an instance of AVError.
+				});
+			}
+		}
+		// 追加pv
+		function addCount(Counter) {
+			var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'wujun234.github.io';
+			var Counter = AV.Object.extend("Counter");
+			var query = new Counter;
+			query.save({
+				words: url
+			}).then(function (object) {
+			})
+		}
+		$(function () {
+			var Counter = AV.Object.extend("Counter");
+			addCount(Counter);
+			showTime(Counter);
+		});
 	
 </script>
 
