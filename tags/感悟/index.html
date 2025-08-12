@@ -8,8 +8,6 @@
 	<!-- title -->
 	
 	<title>
-	
-		囚徒 | 
 	 
 	余生
 	</title>
@@ -178,7 +176,7 @@
 									</a>
 									
 							<ul>
-								<li class="file active">
+								<li class="file">
 									<a href="/2025/07/06/2025/7%E6%9C%88/%E5%9B%9A%E5%BE%92/">
                      
 										    囚徒
@@ -235,138 +233,39 @@
 
 	<!-- 引入正文 -->
 	<div id="content" class="content">
-		<h1 id="article-title">
-	囚徒
-</h1>
-
-<!-- meta -->
-<div class="article-meta">
+		<div id="index">
 	
-		<span>
-			阅读量:<span id="/2025/07/06/2025/7%E6%9C%88/%E5%9B%9A%E5%BE%92/" class="leancloud_visitors" data-flag-title="囚徒"></span>
-		</span>
+		<div class="index-li">
+			<a href="/2025/08/12/2025/8%E6%9C%88/%E6%84%9F%E6%82%9F/">
+				<h2 class="index-title">
+					阅读
+				</h2>
+				<div class="index-brief">
+					树的方向由风决定，人的方向由自己决定；没有规划的人生叫拼图，有规划的人生叫蓝图，没有目标的人生叫流浪，有目标的人生叫航行。，蜜蜂忙碌一天，人见人爱；蚊子整天奔波，人人喊打!多么忙不重要，忙什么才重要。盛年不重来，一日难再晨。及时不勉励，岁月不待人。“时间”是这个世界上最公平的东西，也是唯一消耗不起的
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2025-08-12</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/随笔/">随笔</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
 	
-
-	<span>ribuluo</span>
-	<span>2025-07-06 11:04:50</span>
-
-  <div id="article-categories">
-    
-		  <span>Categories：</span>
-      
-          
-              <span>
-                  <i class="fa fa-folder" aria-hidden="true">
-                  <a href="/categories/故乡/">故乡</a>
-                  </i>
-                
-              </span>
-          
-      
-    
-
-    
-		    <span>Tags：</span>
-        
-            
-                <span>
-                    <i class="fa fa-tag" aria-hidden="true">
-                    <a href="/tags/乡愁/">乡愁</a>
-                    </i>
-                </span>
-            
-        
-    
-  </div>
-
+	
+	<div id="index-paginator">
+		
+	</div>
 </div>
-
-<!-- content -->
-<div id="article-content">
-	<p>后来我才明白，一代人有一代人的牢笼。父亲的牢笼叫故土，而我的牢笼是他乡。一个走不出去，<br>一个无法回来。故乡的土地困住了他，远方生活锁住了我。我们名为选择，实为囚徒。<br>回不去的故乡容不下的他乡<br><img src="/images/20257.jpg" alt="20257.jpg" title="田野"></p>
-
-</div>
-
-<!-- post-guide -->
-
-    <div class="post-guide">
-        <div class="item left">
-            
-              <a href="/2025/08/11/2025/8%E6%9C%88/%E7%89%A9%E6%98%AF%E4%BA%BA%E9%9D%9E/">
-                  <i class="fa fa-angle-left" aria-hidden="true"></i>
-                  线平方的选择
-              </a>
-            
-        </div>
-        <div class="item right">
-            
-              <a href="/2025/06/06/2025/6%E6%9C%88/%E7%A0%B4%E8%8C%A7/">
-                电工基础
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
-              </a>
-            
-        </div>
-    </div>
-
-
-<!-- comment - giscus -->
-
-
-<!-- comment - valine -->
-
-	<div id="vcomments"></div>
-
-
-<script>
-	
-		// 评论
-		new Valine({
-			el: '#vcomments',
-			appId: 'L67iFRJzMgknqsfbMPqQXsw7-gzGzoHsz',
-			appKey: 'jDmzMrc5e09aWvX33m6fyFmY',
-			placeholder: 'Please enter a comment',
-			path: window.location.pathname,
-			avatar: 'retro',
-			highlight: false,
-      recordIP: true,
-      enableQQ: true,
-			requiredFields: ['nick','mail']
-		})
-	
-	
-    // 显示次数
-		function showTime(Counter) {
-			var query = new AV.Query("Counter");
-			if($(".leancloud_visitors").length > 0){
-				var url = $(".leancloud_visitors").attr('id').trim();
-				// where field
-				query.equalTo("words", url);
-				// count
-				query.count().then(function (number) {
-					// There are number instances of MyClass where words equals url.
-					$(document.getElementById(url)).text(number?  number : '--');
-				}, function (error) {
-					// error is an instance of AVError.
-				});
-			}
-		}
-		// 追加pv
-		function addCount(Counter) {
-			var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'wujun234.github.io';
-			var Counter = AV.Object.extend("Counter");
-			var query = new Counter;
-			query.save({
-				words: url
-			}).then(function (object) {
-			})
-		}
-		$(function () {
-			var Counter = AV.Object.extend("Counter");
-			addCount(Counter);
-			showTime(Counter);
-		});
-	
-</script>
 
 	</div>
 	<div id="footer">
