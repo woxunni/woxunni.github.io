@@ -9,7 +9,7 @@
 	
 	<title>
 	
-		标签 | 
+		上班 | 
 	 
 	余生
 	</title>
@@ -244,7 +244,7 @@
 									</a>
 									
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2025/09/04/2025/9%E6%9C%88/%E4%B8%8A%E7%8F%AD/">
                      
 										    上班
@@ -269,75 +269,132 @@
 	<!-- 引入正文 -->
 	<div id="content" class="content">
 		<h1 id="article-title">
-	<i class="fa fa-tags" aria-hidden="true"></i>标签
+	上班
 </h1>
-<h3>
-	总计 9
-</h3>
 
-<div id="article-content">
+<!-- meta -->
+<div class="article-meta">
+	
+		<span>
+			阅读量:<span id="/2025/09/04/2025/9%E6%9C%88/%E4%B8%8A%E7%8F%AD/" class="leancloud_visitors" data-flag-title="上班"></span>
+		</span>
+	
+
+	<span>ribuluo</span>
+	<span>2025-09-04 20:59:37</span>
+
+  <div id="article-categories">
     
-    	<ul>
-            
+		  <span>Categories：</span>
+      
+          
+              <span>
+                  <i class="fa fa-folder" aria-hidden="true">
+                  <a href="/categories/工作/">工作</a>
+                  </i>
                 
-                    <li class="menu-item">
-                        <span>
-                              <a href="/tags/跑步/">跑步(1)</a>
-                        </span>
-                    </li>
-                
-                    <li class="menu-item">
-                        <span>
-                              <a href="/tags/骑行/">骑行(1)</a>
-                        </span>
-                    </li>
-                
-                    <li class="menu-item">
-                        <span>
-                              <a href="/tags/俯卧撑/">俯卧撑(1)</a>
-                        </span>
-                    </li>
-                
-                    <li class="menu-item">
-                        <span>
-                              <a href="/tags/定律/">定律(1)</a>
-                        </span>
-                    </li>
-                
-                    <li class="menu-item">
-                        <span>
-                              <a href="/tags/乡愁/">乡愁(1)</a>
-                        </span>
-                    </li>
-                
-                    <li class="menu-item">
-                        <span>
-                              <a href="/tags/电容/">电容(1)</a>
-                        </span>
-                    </li>
-                
-                    <li class="menu-item">
-                        <span>
-                              <a href="/tags/感悟/">感悟(1)</a>
-                        </span>
-                    </li>
-                
-                    <li class="menu-item">
-                        <span>
-                              <a href="/tags/朋友/">朋友(1)</a>
-                        </span>
-                    </li>
-                
-                    <li class="menu-item">
-                        <span>
-                              <a href="/tags/搬砖/">搬砖(1)</a>
-                        </span>
-                    </li>
-                
-            
-    	</ul>
+              </span>
+          
+      
     
+
+    
+		    <span>Tags：</span>
+        
+            
+                <span>
+                    <i class="fa fa-tag" aria-hidden="true">
+                    <a href="/tags/搬砖/">搬砖</a>
+                    </i>
+                </span>
+            
+        
+    
+  </div>
+
 </div>
+
+<!-- content -->
+<div id="article-content">
+	<p>开始搬砖</p>
+
+</div>
+
+<!-- post-guide -->
+
+    <div class="post-guide">
+        <div class="item left">
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2025/08/12/2025/8%E6%9C%88/3/">
+                往事
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+<!-- comment - giscus -->
+
+
+<!-- comment - valine -->
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			el: '#vcomments',
+			appId: 'L67iFRJzMgknqsfbMPqQXsw7-gzGzoHsz',
+			appKey: 'jDmzMrc5e09aWvX33m6fyFmY',
+			placeholder: 'Please enter a comment',
+			path: window.location.pathname,
+			avatar: 'retro',
+			highlight: false,
+      recordIP: true,
+      enableQQ: true,
+			requiredFields: ['nick','mail']
+		})
+	
+	
+    // 显示次数
+		function showTime(Counter) {
+			var query = new AV.Query("Counter");
+			if($(".leancloud_visitors").length > 0){
+				var url = $(".leancloud_visitors").attr('id').trim();
+				// where field
+				query.equalTo("words", url);
+				// count
+				query.count().then(function (number) {
+					// There are number instances of MyClass where words equals url.
+					$(document.getElementById(url)).text(number?  number : '--');
+				}, function (error) {
+					// error is an instance of AVError.
+				});
+			}
+		}
+		// 追加pv
+		function addCount(Counter) {
+			var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'wujun234.github.io';
+			var Counter = AV.Object.extend("Counter");
+			var query = new Counter;
+			query.save({
+				words: url
+			}).then(function (object) {
+			})
+		}
+		$(function () {
+			var Counter = AV.Object.extend("Counter");
+			addCount(Counter);
+			showTime(Counter);
+		});
+	
+</script>
 
 	</div>
 	<div id="footer">
