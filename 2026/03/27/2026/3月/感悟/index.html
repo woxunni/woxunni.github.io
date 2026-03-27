@@ -9,7 +9,7 @@
 	
 	<title>
 	
-		分类 | 
+		感悟 | 
 	 
 	余生
 	</title>
@@ -354,7 +354,7 @@
 									</a>
 									
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2026/03/27/2026/3%E6%9C%88/%E6%84%9F%E6%82%9F/">
                      
 										    感悟
@@ -379,57 +379,120 @@
 	<!-- 引入正文 -->
 	<div id="content" class="content">
 		<h1 id="article-title">
-	<i class="fa fa-folder-open" aria-hidden="true"></i>分类
+	感悟
 </h1>
-<h3>
-	总计 6
-</h3>
 
-<div id="article-content">
+<!-- meta -->
+<div class="article-meta">
+	
+		<span>
+			阅读量:<span id="/2026/03/27/2026/3%E6%9C%88/%E6%84%9F%E6%82%9F/" class="leancloud_visitors" data-flag-title="感悟"></span>
+		</span>
+	
+
+	<span>ribuluo</span>
+	<span>2026-03-27 19:40:00</span>
+
+  <div id="article-categories">
     
-        <ul>
-            
-                
-                    <li class="menu-item">
-                        <span>
-                            <a href="/categories/自律/">自律(1)</a>
-                        </span>
-                    </li>
-                
-                    <li class="menu-item">
-                        <span>
-                            <a href="/categories/电工/">电工(2)</a>
-                        </span>
-                    </li>
-                
-                    <li class="menu-item">
-                        <span>
-                            <a href="/categories/故乡/">故乡(1)</a>
-                        </span>
-                    </li>
-                
-                    <li class="menu-item">
-                        <span>
-                            <a href="/categories/随笔/">随笔(3)</a>
-                        </span>
-                    </li>
-                
-                    <li class="menu-item">
-                        <span>
-                            <a href="/categories/相册/">相册(3)</a>
-                        </span>
-                    </li>
-                
-                    <li class="menu-item">
-                        <span>
-                            <a href="/categories/工作/">工作(1)</a>
-                        </span>
-                    </li>
-                
-            
-        </ul>
+		  <span>Categories：</span>
+      
     
+
+    
+		    <span>Tags：</span>
+        
+    
+  </div>
+
 </div>
+
+<!-- content -->
+<div id="article-content">
+	<p>categories: </p>
+<ul>
+<li>故乡<br>tags:<br> 心愁</li>
+</ul>
+<hr>
+<p>吾幼时家贫，但仍不知上进，贪玩误学，缺乏志向，偶寄情于山水之间，纵情于男欢女爱，蹉跎人生三十有余，八方谋业，<br>东奔西走，再回首已过而立之年，然尚未娶妻生子，不禁潸然泪下，奈何花有重开日，人无再少年。</p>
+
+</div>
+
+<!-- post-guide -->
+
+    <div class="post-guide">
+        <div class="item left">
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2025/12/21/2025/12%E6%9C%88/%E6%84%9F%E6%82%9F/">
+                告别
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+<!-- comment - giscus -->
+
+
+<!-- comment - valine -->
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			el: '#vcomments',
+			appId: 'L67iFRJzMgknqsfbMPqQXsw7-gzGzoHsz',
+			appKey: 'jDmzMrc5e09aWvX33m6fyFmY',
+			placeholder: 'Please enter a comment',
+			path: window.location.pathname,
+			avatar: 'retro',
+			highlight: false,
+      recordIP: true,
+      enableQQ: true,
+			requiredFields: ['nick','mail']
+		})
+	
+	
+    // 显示次数
+		function showTime(Counter) {
+			var query = new AV.Query("Counter");
+			if($(".leancloud_visitors").length > 0){
+				var url = $(".leancloud_visitors").attr('id').trim();
+				// where field
+				query.equalTo("words", url);
+				// count
+				query.count().then(function (number) {
+					// There are number instances of MyClass where words equals url.
+					$(document.getElementById(url)).text(number?  number : '--');
+				}, function (error) {
+					// error is an instance of AVError.
+				});
+			}
+		}
+		// 追加pv
+		function addCount(Counter) {
+			var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'wujun234.github.io';
+			var Counter = AV.Object.extend("Counter");
+			var query = new Counter;
+			query.save({
+				words: url
+			}).then(function (object) {
+			})
+		}
+		$(function () {
+			var Counter = AV.Object.extend("Counter");
+			addCount(Counter);
+			showTime(Counter);
+		});
+	
+</script>
 
 	</div>
 	<div id="footer">
